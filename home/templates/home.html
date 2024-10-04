@@ -1,0 +1,6 @@
+<form action="{% url 'home'%}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="my_file">Selecione um arquivo:</label>
+    <input type="file" aria-label="procurar" name="my_file" placeholder="Arquivo">
+    <input type="submit" value="Enviar">
+</form>    
