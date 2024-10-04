@@ -130,19 +130,21 @@ FILE_UPLOAD_MAX_SIZE = 30000000 # 30MB # Tamanho maximo do arquivo upado // limi
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# TODAS AS CONFIGURAÇÕES DE AWS S3 
+
 # Regiões da AWS S3
 
 AWS_REGION = 'us-east-2'
-AWS_S3_REGION_NAME = 'us-east-2'
+AWS_S3_REGION_NAME = 'us-east-2' #região onde esta localizado o bucket
 
 # Configuração do Amazon S3
 
-AWS_ACCESS_KEY_ID = 'AKIA6ELKNU5IRKXQXSOL'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'COLOQUE SEUS DADOS AQUI'
+AWS_SECRET_ACCESS_KEY = 'COLOQUE SEUS DADOS AQUI'
 
 # Configuração Básica do bucket da AWS S3
 
-AWS_STORAGE_BUCKET_NAME = 'mybucket-010101'
+AWS_STORAGE_BUCKET_NAME = 'COLOQUE SEUS DADOS AQUI'
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 AWS_S3_FILE_OVERWRITE = False
 
