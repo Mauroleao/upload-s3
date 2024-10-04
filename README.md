@@ -1,4 +1,4 @@
-# Projeto de Upload de Imagens
+# Projeto de Upload de Imagens com integração Storage Local com S3 .
 
 Este projeto é uma aplicação Django para upload de imagens, utilizando o Amazon S3 para armazenamento.
 
@@ -18,39 +18,44 @@ cd <NOME_DO_REPOSITORIO>
 ```
 2. Criar e ativar o ambiente virtual
 No Windows:
-
+```sh
 python -m venv venv
 venv\Scripts\activate
+```
 
 3. Instalar as dependências
-
-pip install -r [requirements.txt]
+```sh
+pip install -r requirements.txt
+```
 
 4. Configurar as variáveis de ambiente
-
+```sh
 AWS_ACCESS_KEY_ID=SEU_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY=SEU_SECRET_ACCESS_KEY
 AWS_STORAGE_BUCKET_NAME=SEU_BUCKET_NAME
 AWS_S3_REGION_NAME=REGIAO
+ ```
 
 5. Aplicar as migrações do banco de dados
-
+```sh
  python [manage.py]
+```
 
  6. Rodar o servidor de desenvolvimento
-python [manage.py]
+python manage.py
 
 
 7. Acessar a aplicação
+   
 Abra o navegador e acesse http://127.0.0.1:8000/
-
+```sh
 .
 ├── home/
-│   ├── [__init__.py](http://_vscodecontentref_/#%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5Cmauro%5C%5CDesktop%5C%5Cupload%5C%5Cvenv%5C%5CLib%5C%5Csite-packages%5C%5Cpip%5C%5C_internal%5C%5Creq%5C%5C__init__.py%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Fvenv%2FLib%2Fsite-packages%2Fpip%2F_internal%2Freq%2F__init__.py%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Fvenv%2FLib%2Fsite-packages%2Fpip%2F_internal%2Freq%2F__init__.py%22%2C%22scheme%22%3A%22file%22%7D%7D)
+│   ├── [__init__.py]
 │   ├── admin.py
 │   ├── apps.py
 │   ├── migrations/
-│   │   ├── [__init__.py](http://_vscodecontentref_/#%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5Cmauro%5C%5CDesktop%5C%5Cupload%5C%5Cvenv%5C%5CLib%5C%5Csite-packages%5C%5Cpip%5C%5C_internal%5C%5Creq%5C%5C__init__.py%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Fvenv%2FLib%2Fsite-packages%2Fpip%2F_internal%2Freq%2F__init__.py%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Fvenv%2FLib%2Fsite-packages%2Fpip%2F_internal%2Freq%2F__init__.py%22%2C%22scheme%22%3A%22file%22%7D%7D)
+│   │   ├── [__init__.py]
 │   │   ├── 0001_initial.py
 │   │   ├── 0002_alter_myfile_arquivo.py
 │   ├── models.py
@@ -59,14 +64,14 @@ Abra o navegador e acesse http://127.0.0.1:8000/
 │   │   ├── status.html
 │   ├── tests.py
 │   ├── views.py
-├── [manage.py](http://_vscodecontentref_/#%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5Cmauro%5C%5CDesktop%5C%5Cupload%5C%5Cmanage.py%22%2C%22_sep%22%3A1%2C%22path%22%3A%22%2Fc%3A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Fmanage.py%22%2C%22scheme%22%3A%22file%22%7D%7D)
+├── [manage.py]
 ├── media/
 │   ├── img/
-├── [requirements.txt](http://_vscodecontentref_/#%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5Cmauro%5C%5CDesktop%5C%5Cupload%5C%5Crequirements.txt%22%2C%22_sep%22%3A1%2C%22path%22%3A%22%2Fc%3A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Frequirements.txt%22%2C%22scheme%22%3A%22file%22%7D%7D)
+├── [requirements.txt]
 ├── upload_imagens/
-│   ├── [__init__.py](http://_vscodecontentref_/#%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5Cmauro%5C%5CDesktop%5C%5Cupload%5C%5Cvenv%5C%5CLib%5C%5Csite-packages%5C%5Cpip%5C%5C_internal%5C%5Creq%5C%5C__init__.py%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Fvenv%2FLib%2Fsite-packages%2Fpip%2F_internal%2Freq%2F__init__.py%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Fvenv%2FLib%2Fsite-packages%2Fpip%2F_internal%2Freq%2F__init__.py%22%2C%22scheme%22%3A%22file%22%7D%7D)
+│   ├── [__init__.py]
 │   ├── asgi.py
-│   ├── [settings.py](http://_vscodecontentref_/#%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5Cmauro%5C%5CDesktop%5C%5Cupload%5C%5Cupload_imagens%5C%5Csettings.py%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fc%253A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Fupload_imagens%2Fsettings.py%22%2C%22path%22%3A%22%2Fc%3A%2FUsers%2Fmauro%2FDesktop%2Fupload%2Fupload_imagens%2Fsettings.py%22%2C%22scheme%22%3A%22file%22%7D%7D)
+│   ├── [settings.py]
 │   ├── urls.py
 │   ├── wsgi.py
 ├── venv/
@@ -75,6 +80,8 @@ Abra o navegador e acesse http://127.0.0.1:8000/
 │   │   ├── site-packages/
 │   ├── Scripts/
 │   ├── pyvenv.cfg
+
+```
 
 Configurações Adicionais
 Para configurar o armazenamento no Amazon S3, edite o arquivo settings.py conforme necessário.
