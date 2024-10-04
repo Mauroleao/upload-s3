@@ -43,11 +43,12 @@ AWS_S3_REGION_NAME=REGIAO
 
 5. Aplicar as migrações do banco de dados
 ```sh
- python [manage.py]
+ python manage.py makemigrations
+ python manage.py migrate
 ```
 
  6. Rodar o servidor de desenvolvimento
-python manage.py
+python manage.py runserver
 
 
 7. Acessar a aplicação
