@@ -2,6 +2,14 @@
 
 Este projeto é uma aplicação Django para upload de imagens, utilizando o Amazon S3 para armazenamento.
 
+## Demonstração
+
+
+
+
+https://github.com/user-attachments/assets/454d738f-519d-49c5-88bf-bb127260f936
+
+
 ## Pré-requisitos
 
 - Python 3.8+
