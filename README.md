@@ -22,6 +22,11 @@ No Windows:
 python -m venv venv
 venv\Scripts\activate
 ```
+No Unix/MacOS:
+```sh
+python3 -m venv venv
+source venv/bin/activate
+```
 
 3. Instalar as dependências
 ```sh
