@@ -13,8 +13,8 @@ Este projeto é uma aplicação Django para upload de imagens, utilizando o Amaz
 ### 1. Clonar o repositório
 
 ```sh
-git clone <URL_DO_REPOSITORIO>
-cd <NOME_DO_REPOSITORIO>
+git clone https://github.com/Mauroleao/upload-s3.git
+cd upload-s3
 ```
 2. Criar e ativar o ambiente virtual
 No Windows:
